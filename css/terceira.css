@@ -1,0 +1,134 @@
+body {
+    background: #dedede;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.faixa {
+    padding: 40px 0 0 0;
+    position: relative;
+}
+
+.faixa.azul {
+    background: #245ca8;
+    min-height: 270px;
+}
+.faixa.cinza {
+    background: #606772;
+    min-height: 270px;
+}
+.faixa.ouro {
+    background: #dcb86c;
+    min-height: 270px;
+}
+
+.logo {
+    position: absolute;
+    left: 26px;
+    top: 28px;
+    font-weight: bold;
+    font-size: 1.15rem;
+    background: #fff;
+    color: #245ca8;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-family: 'Impact', 'Arial Black', Arial, sans-serif;
+    letter-spacing: 1px;
+    z-index: 2;
+    text-align: left;
+}
+.logo-link {
+    text-decoration: none;
+}
+
+.tote-bag-linha, .sponsor-linha, .forn-linha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    padding: 40px 0 0 0;
+    position: relative;
+}
+
+.tote-img, .forn-img, .sponsor-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 13px;
+    background: #fff;
+    box-shadow: 0 2px 8px #0002;
+}
+
+.tote-central, .forn-central, .sponsor-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffc900;
+}
+
+.tote-title, .sponsor-title, .forn-title {
+    font-size: 2.9rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ffc900;
+    margin-bottom: 0;
+}
+.tote-subtitle, .forn-subtitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: -8px;
+    color: #f9f473;
+    text-shadow: 1px 1px 0 #333, 0 2px 6px #ffc90099;
+}
+
+.sponsor-title {
+    color: #ffc900;
+}
+.sponsor-txt {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #ffe46e;
+    text-align: center;
+    margin-top: 8px;
+}
+.logo-forn {
+    background: none;
+    border-radius: 0;
+    width: auto;
+    height: 38px;
+}
+
+.forn-title {
+    color: #000;
+}
+.forn-subtitle {
+    color: #313232;
+    font-size: 2rem;
+    margin-top: -7px;
+    letter-spacing: 2px;
+}
+
+/* Seta/arrow, puede trocar para SVG caso prefira */
+.arrow {
+    width: 62px;
+    height: 28px;
+    position: absolute;
+    background: none;
+    border: none;
+}
+
+.tote-arrow1 { left: 220px; top: 100px; border-left: 4px solid #111; border-top: 4px solid #111; border-radius: 40% 60% 0 0; }
+.tote-arrow2 { left: 340px; top: 50px; border-right: 4px solid #111; border-top: 4px solid #111; border-radius: 60% 40% 0 0; }
+.tote-arrow3 { left: 240px; top: 160px; border-left: 4px solid #111; border-bottom: 4px solid #111; border-radius: 0 0 40% 60%; }
+
+.sponsor-arrow1 { left: 220px; top: 100px; border-left: 4px solid #111; border-top: 4px solid #111; border-radius: 40% 60% 0 0; }
+.sponsor-arrow2 { left: 340px; top: 50px; border-right: 4px solid #111; border-top: 4px solid #111; border-radius: 60% 40% 0 0; }
+.sponsor-arrow3 { left: 240px; top: 160px; border-left: 4px solid #111; border-bottom: 4px solid #111; border-radius: 0 0 40% 60%; }
+
+.forn-arrow1 { left: 220px; top: 100px; border-left: 4px solid #111; border-top: 4px solid #111; border-radius: 40% 60% 0 0; }
+.forn-arrow2 { left: 340px; top: 50px; border-right: 4px solid #111; border-top: 4px solid #111; border-radius: 60% 40% 0 0; }
+.forn-arrow3 { left: 240px; top: 160px; border-left: 4px solid #111; border-bottom: 4px solid #111; border-radius: 0 0 40% 60%; }
+
+@media (max-width: 900px) {
+    .tote-bag-linha, .sponsor-linha, .forn-linha { flex-direction: column; gap: 18px; }
+}
