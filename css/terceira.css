@@ -1,134 +1,169 @@
-body {
-    background: #dedede;
+/* Reset básico */
+* {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial Black', sans-serif; /* Fonte grossa parecida */
 }
 
-.faixa {
-    padding: 40px 0 0 0;
-    position: relative;
+body {
+    width: 100%;
 }
 
-.faixa.azul {
-    background: #245ca8;
-    min-height: 270px;
-}
-.faixa.cinza {
-    background: #606772;
-    min-height: 270px;
-}
-.faixa.ouro {
-    background: #dcb86c;
-    min-height: 270px;
-}
-
-.logo {
-    position: absolute;
-    left: 26px;
-    top: 28px;
-    font-weight: bold;
-    font-size: 1.15rem;
-    background: #fff;
-    color: #245ca8;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-family: 'Impact', 'Arial Black', Arial, sans-serif;
-    letter-spacing: 1px;
-    z-index: 2;
-    text-align: left;
-}
-.logo-link {
-    text-decoration: none;
-}
-
-.tote-bag-linha, .sponsor-linha, .forn-linha {
+/* Configuração Geral das Secções */
+.section {
+    width: 100%;
+    min-height: 100vh; /* Ocupa o ecrã todo */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 36px;
-    padding: 40px 0 0 0;
     position: relative;
+    padding: 20px;
 }
 
-.tote-img, .forn-img, .sponsor-img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 13px;
-    background: #fff;
-    box-shadow: 0 2px 8px #0002;
+/* Cores de Fundo */
+.blue-section {
+    background-color: #1a5ea6; /* Azul forte */
 }
 
-.tote-central, .forn-central, .sponsor-titulo {
+.grey-section {
+    background-color: #5f6a7d; /* Cinza azulado */
+}
+
+.yellow-section {
+    background-color: #d4af37; /* Amarelo mostarda/Dourado */
+}
+
+/* Logótipo no canto superior esquerdo (LINK) */
+.logo-link {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    z-index: 10;
+}
+
+.logo {
+    width: 120px; /* Ajusta o tamanho do logo Fashion Dribble aqui */
+    height: auto;
+}
+
+/* Layout do Conteúdo (Imagens e Texto) */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Colunas Laterais */
+.side-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #ffc900;
+    position: relative;
+    font-size: 20px;
 }
 
-.tote-title, .sponsor-title, .forn-title {
-    font-size: 2.9rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #ffc900;
-    margin-bottom: 0;
-}
-.tote-subtitle, .forn-subtitle {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-top: -8px;
-    color: #f9f473;
-    text-shadow: 1px 1px 0 #333, 0 2px 6px #ffc90099;
+.product-img {
+    width: 200px; /* Tamanho das imagens/tote bags */
+    height: auto;
+    object-fit: cover;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
 }
 
-.sponsor-title {
-    color: #ffc900;
+/* Efeito "recorte" para os jogadores (opcional) */
+.cut-effect {
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
 }
-.sponsor-txt {
-    font-size: 1.15rem;
-    font-weight: bold;
-    color: #ffe46e;
+
+.caption {
+    color: #e0c080; /* Cor do texto "Jogador do tottenham" */
+    font-family: 'Times New Roman', serif;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+/* Texto Central */
+.center-text {
     text-align: center;
-    margin-top: 8px;
-}
-.logo-forn {
-    background: none;
-    border-radius: 0;
-    width: auto;
-    height: 38px;
+    z-index: 5;
 }
 
-.forn-title {
-    color: #000;
-}
-.forn-subtitle {
-    color: #313232;
-    font-size: 2rem;
-    margin-top: -7px;
-    letter-spacing: 2px;
+.highlight-text {
+    font-size: 3.5rem;
+    color: #e0c080; /* Dourado/Amarelo do texto */
+    text-transform: uppercase;
+    line-height: 1;
 }
 
-/* Seta/arrow, puede trocar para SVG caso prefira */
+.outline-text {
+    font-size: 2.5rem;
+    color: transparent;
+    -webkit-text-stroke: 1px #e0c080; /* Contorno das letras */
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+/* Ajuste específico para o texto da secção amarela */
+.highlight-text.black { color: #000; }
+.outline-text.black { -webkit-text-stroke: 1px #000; }
+
+/* Setas */
 .arrow {
-    width: 62px;
-    height: 28px;
+    width: 80px; /* Tamanho da seta */
     position: absolute;
-    background: none;
-    border: none;
 }
 
-.tote-arrow1 { left: 220px; top: 100px; border-left: 4px solid #111; border-top: 4px solid #111; border-radius: 40% 60% 0 0; }
-.tote-arrow2 { left: 340px; top: 50px; border-right: 4px solid #111; border-top: 4px solid #111; border-radius: 60% 40% 0 0; }
-.tote-arrow3 { left: 240px; top: 160px; border-left: 4px solid #111; border-bottom: 4px solid #111; border-radius: 0 0 40% 60%; }
+/* Posicionar setas - Ajusta os valores 'top', 'left', 'right' conforme a tua imagem real */
+.arrow-left {
+    bottom: -40px;
+    right: -60px;
+    transform: rotate(-20deg);
+}
 
-.sponsor-arrow1 { left: 220px; top: 100px; border-left: 4px solid #111; border-top: 4px solid #111; border-radius: 40% 60% 0 0; }
-.sponsor-arrow2 { left: 340px; top: 50px; border-right: 4px solid #111; border-top: 4px solid #111; border-radius: 60% 40% 0 0; }
-.sponsor-arrow3 { left: 240px; top: 160px; border-left: 4px solid #111; border-bottom: 4px solid #111; border-radius: 0 0 40% 60%; }
+.arrow-right {
+    top: -40px;
+    left: -60px;
+    transform: rotate(20deg);
+}
 
-.forn-arrow1 { left: 220px; top: 100px; border-left: 4px solid #111; border-top: 4px solid #111; border-radius: 40% 60% 0 0; }
-.forn-arrow2 { left: 340px; top: 50px; border-right: 4px solid #111; border-top: 4px solid #111; border-radius: 60% 40% 0 0; }
-.forn-arrow3 { left: 240px; top: 160px; border-left: 4px solid #111; border-bottom: 4px solid #111; border-radius: 0 0 40% 60%; }
+/* Layout Específico da Secção 3 (Fornecedores) */
+.suppliers {
+    position: relative;
+    height: 400px; /* Altura fixa para permitir posicionamento livre */
+    justify-content: center;
+}
 
-@media (max-width: 900px) {
-    .tote-bag-linha, .sponsor-linha, .forn-linha { flex-direction: column; gap: 18px; }
+.supplier-wrapper {
+    position: absolute;
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 10%;
+}
+
+.top-right {
+    top: 0;
+    right: 10%;
+}
+
+.supplier-logo {
+    width: 150px;
+    display: block;
+}
+
+/* Responsividade (Telemóvel) */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .arrow { display: none; } /* Esconde setas em ecrãs pequenos para não atrapalhar */
+    
+    .suppliers { height: auto; }
+    .supplier-wrapper { position: static; margin: 20px 0; }
 }

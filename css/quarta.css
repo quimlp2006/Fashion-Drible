@@ -1,0 +1,106 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial Black', sans-serif; /* Fonte grossa parecida */
+}
+
+/* Fundo da página com imagem e sobreposição azul */
+body {
+    width: 100%;
+    height: 100vh;
+    background: 
+        linear-gradient(rgba(26, 94, 166, 0.7), rgba(26, 94, 166, 0.7)), /* Filtro Azul Transparente */
+        url('fundo-quarto.jpg'); /* A tua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Logótipo no canto */
+.logo-link {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
+
+.logo {
+    width: 150px; /* Ajusta o tamanho do logo aqui */
+    height: auto;
+}
+
+/* Container dos botões */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre os botões */
+    width: 100%;
+    max-width: 400px; /* Largura máxima dos botões */
+    padding: 20px;
+}
+
+/* Estilo comum para os Inputs (Log In e Password) */
+.input-box input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 50px; /* Bordas bem redondas */
+    border: 3px solid #000; /* Borda preta grossa */
+    background-color: #fff;
+    font-size: 1.5rem;
+    color: #1a3c6e; /* Azul escuro do texto */
+    text-transform: uppercase;
+    text-align: left;
+    padding-left: 30px; /* Espaço interno à esquerda */
+    outline: none;
+}
+
+/* Estilo do Placeholder (texto "LOG IN" e "PASSWORD") */
+::placeholder {
+    color: #1a3c6e;
+    font-weight: 900; /* Extra bold */
+    opacity: 1;
+}
+
+/* Botão ENTER */
+.enter-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 50px;
+    border: 3px solid #fff; /* Borda branca */
+    background-color: #1a3c6e; /* Fundo azul escuro */
+    color: #fff; /* Texto branco */
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none; /* Remove sublinhado do link */
+    text-transform: uppercase;
+    transition: 0.3s;
+    margin-top: 10px; /* Um pouco mais de espaço acima do Enter */
+}
+
+/* Efeito ao passar o rato no botão Enter */
+.enter-btn:hover {
+    background-color: #142d53;
+    cursor: pointer;
+    transform: scale(1.02); /* Aumenta ligeiramente */
+}
+
+/* Responsivo para telemóveis */
+@media (max-width: 600px) {
+    .logo {
+        width: 100px;
+    }
+    .logo-link {
+        top: 20px;
+        left: 20px;
+    }
+    .input-box input, .enter-btn {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+}
